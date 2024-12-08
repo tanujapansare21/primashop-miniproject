@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+    }
+    .container {
+      width: 40%;
+      margin: 20px auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    .cart-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #ddd;
+    }
+    .cart-item span {
+      font-size: 16px;
+    }
+    .cart-item input {
+      width: 40px;
+      text-align: center;
+    }
+    .total {
+      font-size: 18px;
+      font-weight: bold;
+      text-align: right;
+      margin-top: 20px;
+    }
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      background-color: #f9a13c;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 16px;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+    .btn:hover {
+      background-color: #eb6e08;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Your Cart</h1>
+    <div class="cart-item">
+      <span>Item A - ₹100</span>
+      <input type="number" value="1" min="1">
+    </div>
+    <div class="cart-item">
+      <span>Item B - ₹200</span>
+      <input type="number" value="1" min="1">
+    </div>
+    <div class="total">Total: ₹300</div>
+    <a href="paymentgateway.html" class="btn">Proceed to Payment</a>
+  </div>
+</body>
+</html>
