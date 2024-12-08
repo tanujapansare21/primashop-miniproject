@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Gateway</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+    }
+    .container {
+      width: 50%;
+      margin: 20px auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    .payment-methods {
+      margin-top: 20px;
+    }
+    .payment-method {
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+    }
+    label {
+      font-weight: bold;
+      cursor: pointer;
+      margin-left: 10px;
+      flex: 1;
+    }
+    input[type="radio"] {
+      margin-right: 10px;
+    }
+    .method-details {
+      display: none;
+      margin-top: 10px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+    .method-details.active {
+      display: block;
+    }
+    input[type="text"], input[type="password"], input[type="number"], select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+    .btn {
+      width: 100%;
+      padding: 10px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      text-align: center;
+      font-size: 16px;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+    .btn:hover {
+      background-color: #218838;
+    }
+    .icon {
+      color: #333;
+      font-size: 20px;
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Payment Gateway</h1>
+    <div class="payment-methods">
+      <!-- Credit/Debit Card -->
+      <div class="payment-method">
+        <input type="radio" name="payment-method" id="card" onclick="showDetails('card-details')">
+        <i class="fas fa-credit-card icon"></i>
+        <label for="card">Credit/Debit Card</label>
+        <div id="card-details" class="method-details">
+          <label for="card-number">Card Number:</label>
+          <input type="text" id="card-number" placeholder="Enter card number" required>
+          <label for="expiry-date">Expiry Date:</label>
+          <input type="text" id="expiry-date" placeholder="MM/YY" required>
+          <label for="cvv">CVV:</label>
+          <input type="password" id="cvv" placeholder="Enter CVV" required>
+        </div>
+      </div>
+      <!-- UPI -->
+      <div class="payment-method">
+        <input type="radio" name="payment-method" id="upi" onclick="showDetails('upi-details')">
+        <i class="fas fa-mobile-alt icon"></i>
+        <label for="upi">UPI</label>
+        <div id="upi-details" class="method-details">
+          <label for="upi-id">UPI ID:</label>
+          <input type="text" id="upi-id" placeholder="Enter your UPI ID (e.g., name@bank)" required>
+        </div>
+      </div>
+      <!-- Net Banking -->
+      <div class="payment-method">
+        <input type="radio" name="payment-method" id="net-banking" onclick="showDetails('net-banking-details')">
+        <i class="fas fa-university icon"></i>
+        <label for="net-banking">Net Banking</label>
+        <div id="net-banking-details" class="method-details">
+          <label for="bank-name">Bank Name:</label>
+          <select id="bank-name" required>
+            <option value="">Select your bank</option>
+            <option value="sbi">State Bank of India</option>
+            <option value="hdfc">HDFC Bank</option>
+            <option value="icici">ICICI Bank</option>
+            <option value="axis">Axis Bank</option>
+          </select>
+        </div>
+      </div>
+      <!-- Wallets -->
+      <div class="payment-method">
+        <input type="radio" name="payment-method" id="wallets" onclick="showDetails('wallets-details')">
+        <i class="fas fa-wallet icon"></i>
+        <label for="wallets">Wallets</label>
+        <div id="wallets-details" class="method-details">
+          <label for="wallet-select">Select Wallet:</label>
+          <select id="wallet-select" required>
+            <option value="">Select your wallet</option>
+            <option value="paytm">Paytm</option>
+            <option value="google-pay">Google Pay</option>
+            <option value="phonepe">PhonePe</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <button>
+    <a href="https://razorpay.me/@tanujaanilpansare?amountEPec5evqGoRk2C8icWNJlQ%3D%3D" class="btn">Pay Now</a></button>
+  </div>
+
+  <script>
+    function showDetails(methodId) {
+      const details = document.querySelectorAll('.method-details');
+      details.forEach(detail => detail.classList.remove('active'));
+      document.getElementById(methodId).classList.add('active');
+    }
+  </script>
+</body>
+</html>
