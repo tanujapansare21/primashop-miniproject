@@ -776,3 +776,17 @@ html{
 .custom-slide-image.active {
     opacity: 1;
 }
+.btnn{
+    margin-left: 80px;
+    background-color:#eb8c34;
+    border-radius: 8px;
+    border-color: rgb(3, 3, 3);
+    padding: 3px;
+   
+}
+.btnn:hover{
+    background-color: #eb6b34;
+    transition: 1s;
+    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.3);
+    
+}
