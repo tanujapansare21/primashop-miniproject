@@ -86,9 +86,14 @@
       </p>
       <div class="btn"><button>Shop Now</button></div>
     </div>
-    <div class="img">
-    <button>  <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Wireless/devjyoti/GW/Uber/Nov/D103625178_DesktopTallHero_3000x1200_V3._CB558389732_.jpg" alt=""></button>
-    </div> 
+    <div id="custom-slideshow-container">
+      <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Wireless/devjyoti/GW/Uber/Nov/Nov_New_3000x1200._CB542180708_.jpg" class="custom-slide-image active" alt="Slide 1">
+      <img src="https://m.media-amazon.com/images/G/31/img23/Wireless/nbshagun/clp/BAU/4Dec/D111800050_1400x800_18._CB539212273_.jpg" class="custom-slide-image" alt="Slide 2" height="1500px" width="600px">
+      <img src="https://m.media-amazon.com/images/G/31/img24/Wireless/Samsung/SamsungBau/S23Ultra/11thNov/D68397255_IN_WLME_SamsungBAU_Galaxy-S32_New_Launch_catpage_1400x800_3._CB541507742_.jpg" class="custom-slide-image" alt="Slide 3">
+      <img src="https://m.media-amazon.com/images/G/31/img22/Wireless/Meghana/iQOO/PreBook/V4/_catpage_1400x800_7._CB539031329_.jpg" class="custom-slide-image" alt="Slide 4">
+      <img src="https://m.media-amazon.com/images/G/31/img23/Wireless/Xiaomi/Note14/new/D174826513_SIM_1400x800._CB539009227_.jpg" class="custom-slide-image" alt="Slide 4">
+  
+    </div>
   </section>
     <!-- home content -->
 
@@ -578,8 +583,8 @@
     <div class="container" id="newslater">
       <h3 class="text-center">Subscribe To The Mobile Shop For Latest upload.</h3>
       <div class="input text-center">
-        <input type="text" placeholder="Enter Your Email..">
-        <button id="subscribe">SUBSCRIBE</button>
+        <input type="email" placeholder="Enter Your Email..">
+        <button id="subscribe" type="submit" >SUBSCRIBE</button>
       </div>
     </div>
     <!-- newslater -->
@@ -654,6 +659,16 @@
     <a href="#" class="arrow"><i><img src="./images/arrow.png" alt=""></i></a>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script>
+      let currentSlideIndex = 0;
+      const slides = document.querySelectorAll('.custom-slide-image');
+      
+      setInterval(() => {
+          slides[currentSlideIndex].classList.remove('active');
+          currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+          slides[currentSlideIndex].classList.add('active');
+      }, 3000);
+  </script>
 
 </body>
 </html>
