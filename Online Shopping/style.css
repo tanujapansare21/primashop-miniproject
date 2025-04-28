@@ -119,9 +119,6 @@
 }
 /* navbar */
 
-
-
-
 /* home content */
 .home{
     width: 100%;
@@ -210,11 +207,6 @@
 
 
 
-
-
-
-
-
 /* product cards */
 #product-cards{
     margin-top: 100px;
@@ -256,11 +248,6 @@
     }
 }
 /* product cards */
-
-
-
-
-
 
 
 
@@ -328,10 +315,6 @@
     }
 }
 /* other cards */
-
-
-
-
 
 
 /* banner */
@@ -423,12 +406,6 @@
 
 
 
-
-
-
-
-
-
 /* other cards */
 #other{
     margin-top: 50px;
@@ -516,8 +493,6 @@
     }
 }
 /* newslater */
-
-
 
 
 /* footer */
@@ -769,4 +744,49 @@ html{
     background-color: rgb(67 0 86);
     color: white;
 }
-/* contact */
+.message {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+#custom-slideshow-container {
+    width: 1500px;
+    height: 600px;
+    position: relative;
+    overflow: hidden;
+}
+.custom-slide-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s;
+}
+.custom-slide-image.active {
+    opacity: 1;
+}
+.btnn{
+    margin-left: 80px;
+    background-color:#eb8c34;
+    border-radius: 8px;
+    border-color: rgb(3, 3, 3);
+    padding: 3px;
+   
+}
+.btnn:hover{
+    background-color: #eb6b34;
+    transition: 1s;
+    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.3);
+    
+}
